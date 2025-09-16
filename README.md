@@ -1,10 +1,10 @@
-Inventory Management with Stored Procedures
+Inventory Management with Stored Procedures  
 
-Tables: Stores product details (name, category, price, stock).
+Tables: Stores product details (name, category, price, stock).  
 
-Stored Procedures
-1. AddProduct 
-    Inserts a new product into the inventory.
+Stored Procedures  
+1. AddProduct  
+    Inserts a new product into the inventory.  
 
 2. UpdateStock  
     Updates the stock quantity for an existing product.  
@@ -13,19 +13,19 @@ Stored Procedures
     Returns current stock for a given product.  
 
 
-Execution Commands
+Execution Commands  
 
-ADDING NEW PRODUCTS TO THE INVENTORY
-    CALL AddProduct('iPhone 15', 'Electronics', 80000, 10);
-    CALL AddProduct('Nike Shoes', 'Footwear', 6000, 20);
-    CALL AddProduct('MacBook Air', 'Electronics', 120000, 5);
+ADDING NEW PRODUCTS TO THE INVENTORY  
+    CALL AddProduct('iPhone 15', 'Electronics', 80000, 10);  
+    CALL AddProduct('Nike Shoes', 'Footwear', 6000, 20);  
+    CALL AddProduct('MacBook Air', 'Electronics', 120000, 5);  
 
-UPDATING THE STOCK AFTER ADDING MORE QUANTITY OR SELLING A PRODUCT
-    CALL UpdateStock(1, -2); -- Sold 2 units
-    CALL UpdateStock(1, 5); -- Added 5 more iPhone 15 to the stock
+UPDATING THE STOCK AFTER ADDING MORE QUANTITY OR SELLING A PRODUCT  
+    CALL UpdateStock(1, -2); -- Sold 2 units  
+    CALL UpdateStock(1, 5); -- Added 5 more iPhone 15 to the stock  
 
-CHECKING THE AVAILABILITY OF THE STOCK IN THE INVENTORY
-    CALL CheckAvailability(1, @stock);
-    SELECT @stock AS 'Available Stock';
-    CALL CheckAvailability(2, @stock);
-    SELECT @stock AS 'Available Stock'
+CHECKING THE AVAILABILITY OF THE STOCK IN THE INVENTORY  
+    CALL CheckAvailability(1, @stock);  
+    SELECT @stock AS 'Available Stock';  
+    CALL CheckAvailability(2, @stock);  
+    SELECT @stock AS 'Available Stock'  
